@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kianda Muzik</string>
+    <string name="todo">TODO</string>
+    <string name="nomeArtista">Vocal Livre</string>
+    <string name="descricaoArtist">Um Grupo de jovens amigos que buscam, no louvor e no voluntariado, a inspiração para viver e testemunhar a vida cristã.</string>
+    <string name="top_m_sicas">Top Músicas</string>
+    <string name="tracktitle">Autor da Vida</string>
+</resources>

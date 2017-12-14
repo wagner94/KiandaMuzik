@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/capa"
+    style="Bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.vanklein.kiandamuzik.TelaArtistaDetalhada">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/vocal_livre" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton6"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/ic_play_arrow_black_24dp" android:focusable="true" />
+
+    <TextView
+        android:id="@+id/nomeDoArtista"
+        android:layout_width="319dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:lineSpacingExtra="10sp"
+        android:text="@string/nomeArtista"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/descricaoArtista"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+        app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/descricaoArtista"
+        android:layout_width="328dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/descricaoArtist"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+        app:layout_constraintStart_toEndOf="@+id/guideline_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/nomeDoArtista" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_esquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="17dp" />
+
+    <TextView
+        android:id="@+id/topMusicas"
+        android:layout_width="316dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/top_m_sicas"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+        app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoArtista" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listaDeMusicas"
+        android:layout_width="318dp"
+        android:layout_height="101dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+        app:layout_constraintStart_toEndOf="@+id/guideline_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/topMusicas"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
+
+</ScrollView>
